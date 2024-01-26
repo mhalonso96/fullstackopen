@@ -1,6 +1,15 @@
-const media = function(a, b) { // *média
-    return (a + b) / 2
+class Pessoa {
+  constructor(nome, idade) {
+    this.nome = nome
+    this.idade = idade
   }
-  
-  const resultado = media(2, 5)
-  console.log(resultado)
+  cumprimentar() {
+    console.log('olá, meu nome é ' + this.nome)
+  }
+}
+
+const adam = new Pessoa('Adam Ondra', 29)
+adam.cumprimentar()
+
+const janja = new Pessoa('Janja Garnbret', 23)
+janja.cumprimentar()
