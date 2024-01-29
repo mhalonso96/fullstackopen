@@ -36,7 +36,12 @@ const Statistics = (props) => {
   }
   const StatisticsLine = ({text, value})=>{
     return (
-      <p>{text} {value}</p>
+      <tr>{text} 
+        <td>
+          {value}
+        </td>
+      </tr>
+      
     )
   }
 
