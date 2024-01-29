@@ -22,22 +22,18 @@ const App = () => {
    
   const [selected, setSelected] = useState(0)
   const [vote, setVote] =  useState(anecdotes.map(()=>0))
+  console.log("Initial: ",vote)
   const [mostVote, setMostVotes] = useState(0)
 
   const randomSelect = () => {
     const randomNumber = parseInt(Math.random()*anecdotes.length)
     setSelected(randomNumber)
-    console.log(randomNumber)
-   
   }
   
   const voteSelect = () => {  
     const newVote = [...vote]
-    console.log("antes ",newVote)
     newVote[selected]+=1
     setVote(newVote)
-    console.log("depois",newVote)
-    console.log(vote)
 
     if (newVote[selected]>vote[mostVote]){
       setMostVotes(selected)
