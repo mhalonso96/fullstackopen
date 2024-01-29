@@ -20,14 +20,18 @@ const Button = ({action, text}) => {
 const Statistics = (props) => {
   if (props.all !== 0){
     return (
-      <div>
-        <StatisticsLine text="Good" value={props.good}/>
-        <StatisticsLine text="Neutral" value={props.neutral}/>
-        <StatisticsLine text="Bad" value={props.bad}/>
-        <StatisticsLine text="All" value={props.all}/>
-        <StatisticsLine text="Average" value={props.average}/>
-        <StatisticsLine text="Positive" value={props.positive}/>
-      </div>
+      <table>
+        <tbody>
+          <StatisticsLine text="Good" value={props.good}/>
+          <StatisticsLine text="Neutral" value={props.neutral}/>
+          <StatisticsLine text="Bad" value={props.bad}/>
+          <StatisticsLine text="All" value={props.all}/>
+          <StatisticsLine text="Average" value={props.average}/>
+          <StatisticsLine text="Positive" value={props.positive}/>
+
+        </tbody>
+        
+      </table>
     )
   }
     return(
@@ -36,10 +40,9 @@ const Statistics = (props) => {
   }
   const StatisticsLine = ({text, value})=>{
     return (
-      <tr>{text} 
-        <td>
-          {value}
-        </td>
+      <tr>
+        <td>{text}</td>
+        <td>{value}</td>
       </tr>
       
     )
