@@ -1,7 +1,7 @@
 const Name = ({person, deletePerson}) => {
     return (
-      <div>
-        <li>{person.name} {person.number}</li>
+      <div >
+        <li className="name">{person.name} {person.number}</li>
         <button onClick={deletePerson}>Delete</button>
       </div>
       

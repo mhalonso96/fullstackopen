@@ -1,6 +1,6 @@
 const Filter = ({search, handleSearchChange, handleFilterClick}) => {
     return (
-        <div>
+        <div className="name">
             Filter shown with: <input value={search} onChange={handleSearchChange}/>
             <button onClick={handleFilterClick}>Search</button>
         </div>
